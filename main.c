@@ -1,8 +1,13 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "inputHandler.h"
 
 int main()
 {
-    printf("Hello world!\n");
+    while(1) {
+        handleInput(stdin);
+    };
+
+
+    AVL_8_Data_Element mydataelement;
+
     return 0;
 }

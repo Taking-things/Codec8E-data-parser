@@ -31,6 +31,22 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="commandHandler.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="commandHandler.h" />
+		<Unit filename="dataHandler.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="dataHandler.h" />
+		<Unit filename="dataStorage.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="dataStorage.h" />
+		<Unit filename="inputHandler.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="inputHandler.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

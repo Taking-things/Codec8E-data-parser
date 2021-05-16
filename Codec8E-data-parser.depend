@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1621181117 source:d:\projects\github\codec8e-data-parser\commandhandler.c
+	"commandHandler.h"
+
+1621186459 source:d:\projects\github\codec8e-data-parser\datahandler.c
+	"dataHandler.h"
+
+1621186480 source:d:\projects\github\codec8e-data-parser\datastorage.c
+	"dataStorage.h"
+
+1621183989 source:d:\projects\github\codec8e-data-parser\inputhandler.c
+	"inputHandler.h"
+
+1621181511 source:d:\projects\github\codec8e-data-parser\main.c
+	"inputHandler.h"
+
+1621174908 d:\projects\github\codec8e-data-parser\inputhandler.h
+	<stdio.h>
+	<stdlib.h>
+	"commandHandler.h"
+	"dataHandler.h"
+
+1621176072 d:\projects\github\codec8e-data-parser\commandhandler.h
+
+1621186759 d:\projects\github\codec8e-data-parser\datahandler.h
+	"dataStorage.h"
+
+1621186166 d:\projects\github\codec8e-data-parser\datastorage.h
+	<stdio.h>
+	<stdlib.h>
+
