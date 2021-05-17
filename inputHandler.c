@@ -1,9 +1,5 @@
 #include "inputHandler.h"
 
-//expecting HEX string as input? if yes store input in 1536 size array and validate each character as a hex character
-//if ASCII string then store in 3072 size char array and perform translation into hex string
-//assuming HEX string as input
-
 
 void handleInput(FILE *stream){
 
@@ -25,14 +21,13 @@ void handleInput(FILE *stream){
     else
     {
         unsigned char processedBuffer[1536];
-        int debugg = hexStringToBytes(inputString, processedBuffer, &size);
-        if(debugg == 0)
+        int conversionFlag = hexStringToBytes(inputString, processedBuffer, &size);
+        if(conversionFlag == 0)
         {
-            //dumpHex(processedBuffer, size); //debugging
             handleData(processedBuffer);
         } else
         {
-            printf("bad input");
+            printf("...\n");
         }
     }
 };
@@ -62,33 +57,4 @@ int hexStringToBytes(const char *hexStr, unsigned char *output, unsigned int *ou
   }
   output[finalLen] = '\0';
   return 0;
-};
-
-void dumpHex(const void* data, size_t size) {
-	char ascii[17];
-	size_t i, j;
-	ascii[16] = '\0';
-	for (i = 0; i < size; ++i) {
-		printf("%02X ", ((unsigned char*)data)[i]);
-		if (((unsigned char*)data)[i] >= ' ' && ((unsigned char*)data)[i] <= '~') {
-			ascii[i % 16] = ((unsigned char*)data)[i];
-		} else {
-			ascii[i % 16] = '.';
-		}
-		if ((i+1) % 8 == 0 || i+1 == size) {
-			printf(" ");
-			if ((i+1) % 16 == 0) {
-				printf("|  %s \n", ascii);
-			} else if (i+1 == size) {
-				ascii[(i+1) % 16] = '\0';
-				if ((i+1) % 16 <= 8) {
-					printf(" ");
-				}
-				for (j = (i+1) % 16; j < 16; ++j) {
-					printf("   ");
-				}
-				printf("|  %s \n", ascii);
-			}
-		}
-	}
 };

@@ -48,7 +48,6 @@ int detectPacketType(unsigned char *string){
     if(  memcmp(string, buffer, 4) != 0  ){ //if condition met, preamble of tcp packet is not present. Look for udp packet validity
 
        UdpDataLength = (short)((string[0] << 8) | string[1]);
-       printf("is it you ? %d", UdpDataLength);
 
         if(string[UdpDataLength+2] == 0) //we are expecting '\0' character to be found at dataLength+2 position
         {
