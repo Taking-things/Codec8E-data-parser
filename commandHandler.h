@@ -1,4 +1,4 @@
-void handleCommand(char *string);
+void handleCommand(char *inputString);
 
 void freeBuffers();
 
